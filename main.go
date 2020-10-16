@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "github.com/svang/api/cmd"
+import "github.com/svang/svangapi/cmd"
 
 func main() {
 	cmd.Execute()

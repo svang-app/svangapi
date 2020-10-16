@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/spf13/pflag"
-	"github.com/svang/api/internal/config"
-	"github.com/svang/api/internal/yaml"
+	"github.com/svang/svangapi/internal/config"
+	"github.com/svang/svangapi/internal/yaml"
 )
 
 var logDirPathFromEnv string //This will be set through the build command, see Makefile

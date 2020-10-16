@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/svang/api/internal/config"
+	"github.com/svang/svangapi/internal/config"
 	"gopkg.in/yaml.v2"
 )
 

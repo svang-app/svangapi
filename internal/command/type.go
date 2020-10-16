@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/spf13/pflag"
-	"github.com/svang/api/internal/config"
+	"github.com/svang/svangapi/internal/config"
 )
 
 //Instance is the main struct for command configs

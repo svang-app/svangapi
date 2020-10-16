@@ -10,13 +10,13 @@ The following assumes that you are using a MacBook. You may to tweak this for Li
 4. `git checkout develop`
 2. `brew install goreleaser`
 5. `mkdir -p svang/api`
-6. `cobra init svang/api --pkg-name github.com/svang/api`
+6. `cobra init svang/api --pkg-name github.com/svang/svangapi`
 7. `cd svang/api`
 8. Create run and version command `cobra add run` and `cobra add version`
 
 Define module path
 ```
-go mod init github.com/svang/api
+go mod init github.com/svang/svangapi
 go install
 go run main.go
 go run main.go run --> run command

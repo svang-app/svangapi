@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/svang/api/internal/command"
+	"github.com/svang/svangapi/internal/command"
 )
 
 // initCmd represents the init command

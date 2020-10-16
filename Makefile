@@ -1,18 +1,18 @@
 build:
-	go build -ldflags "-X github.com/svang/api/cmd.gitCommitHash=`git rev-parse HEAD` \
-	   -X github.com/svang/api/cmd.buildTime=`date -u '+%Y-%m-%d--%H:%M:%S%p'` \
-	   -X github.com/svang/api/cmd.gitBranch=`git branch --show-current` \
-	   -X github.com/svang/api/cmd.tagVersion=`git describe --tags --long`" \
+	go build -ldflags "-X github.com/svang/svangapi/cmd.gitCommitHash=`git rev-parse HEAD` \
+	   -X github.com/svang/svangapi/cmd.buildTime=`date -u '+%Y-%m-%d--%H:%M:%S%p'` \
+	   -X github.com/svang/svangapi/cmd.gitBranch=`git branch --show-current` \
+	   -X github.com/svang/svangapi/cmd.tagVersion=`git describe --tags --long`" \
 	   -o bin/svangapi main.go
 build-w-clean: clean build
 build-linux: # example: make build-linux DB_PATH=/dir/to/db
 	env GOOS=linux GOARCH=amd64 go build -ldflags \
-	"-X github.com/svang/api/internal/command.stateDBPathFromEnv=/tmp \
-	-X github.com/svang/api/internal/command.logDirPathFromEnv=/var/log/svang/api \
-	-X github.com/svang/api/cmd.gitCommitHash=`git rev-parse HEAD` \
-	-X github.com/svang/api/cmd.buildTime=`date -u '+%Y-%m-%d--%H:%M:%S%p'` \
-	-X github.com/svang/api/cmd.gitBranch=`git branch --show-current` \
-	-X github.com/svang/api/cmd.tagVersion=`git describe --tags --long`" \
+	"-X github.com/svang/svangapi/internal/command.stateDBPathFromEnv=/tmp \
+	-X github.com/svang/svangapi/internal/command.logDirPathFromEnv=/var/log/svang/api \
+	-X github.com/svang/svangapi/cmd.gitCommitHash=`git rev-parse HEAD` \
+	-X github.com/svang/svangapi/cmd.buildTime=`date -u '+%Y-%m-%d--%H:%M:%S%p'` \
+	-X github.com/svang/svangapi/cmd.gitBranch=`git branch --show-current` \
+	-X github.com/svang/svangapi/cmd.tagVersion=`git describe --tags --long`" \
 	-o bin/svangapi main.go
 send-linux: install build-linux
 	scp bin/svangapi root@naanstop.zinox.com:/usr/local/bin

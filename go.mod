@@ -1,4 +1,4 @@
-module github.com/svang/api
+module github.com/svang/svangapi
 
 go 1.14
 
