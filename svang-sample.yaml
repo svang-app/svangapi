@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Configuration
+metadata:
+  name: sVang
+spec:
+  mail:
+    user: Type email here - vikram@zinox.com
+    password: Type password here
+  serviceAccount:
+    type: service_account
+    project_id: Firebase project id
+    rivate_key_id: Private key ID
+    private_key: Private Key
+    client_email: firebase client email
+    client_id: https://accounts.google.com/o/oauth2/auth
+    auth_uri: https://oauth2.googleapis.com/token
+    token_uri: https://www.googleapis.com/oauth2/v1/certs
+    auth_provider_x509_cert_url: x509 cert url
+    client_x509_cert_url: firebase client id
+  firebaseConfig:
+    apiKey: Firebase API Key
+    authDomain: Firebase Auth Domain
+    databaseURL: Firebase database url
+    projectId: Firebase Project ID
+    storageBucket: Firebase storage bucket
+    messagingSenderId: Firevase messasing sender id
+    appId: Firebase APP ID

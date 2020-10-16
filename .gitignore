@@ -1,0 +1,30 @@
+# Folder view configuration files
+.vscode/*
+__debug_bin
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+.bash_history_fyre.ref
+
+# Compiled C++ files
+*.out
+
+#binary
+bin/
+
+#logs
+logs/
+*.log
+
+#DS Store
+.DS_Store
+
+# Releases
+dist/
